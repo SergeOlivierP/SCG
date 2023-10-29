@@ -10,17 +10,26 @@
             font-family: Arial, sans-serif;
             margin: 40px;
         }
-
-        #logo {
-            width: 200px;
-            height: 60px;
-            background-color: #eee;
-            margin-bottom: 20px;
-            text-align: center;
-            line-height: 60px;
-            font-size: 24px;
+        .logo {
+            max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+            height: auto; /* Maintains the image's aspect ratio */
+            display: block; /* Centers the logo when using margin */
+            margin: 0 auto 20px; /* Centers the logo horizontally */
         }
-
+        
+        /* Media query for larger screens (e.g., desktops) */
+        @media (min-width: 768px) {
+            .logo {
+                width: 250px; /* or whatever size you prefer for desktop */
+            }
+        }
+        
+        /* Media query for smaller screens (e.g., mobile devices) */
+        @media (max-width: 767px) {
+            .logo {
+                width: 150px; /* or whatever size you prefer for mobile */
+            }
+        }
         h1, h2 {
             color: #333;
         }
